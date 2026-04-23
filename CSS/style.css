@@ -1,0 +1,340 @@
+/* fonts */
+
+
+/* Amenti - local link */
+@font-face {
+    font-family: "Amenti";
+    src: url('#') format('truetype');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* Crimson text- perhaps using the pro one cuz there is no crimson default text can't find it*/
+@font-face {
+    font-family: "Crimson Text";
+    src: url('https://fonts.gstatic.com/s/crimsontext/v19/wlp2gwHKFkZgtmSR3NB0oRJvaAJSA.woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* crimson italic */
+@font-face {
+    font-family: "Crimson Text";
+    src: url('https://fonts.gstatic.com/s/crimsontext/v19/wlpygwHKFkZgtmSR3NB0oRJXAC5inA.woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* outfit ones */
+@font-face {
+    font-family: "Outfit";
+    src: url('https://fonts.gstatic.com/s/outfit/v11/QGYyz_MVcBeNP4NjuGObqx1XmO1I4TC1C4G-EiAou6Y.woff2');
+    font-weight: 400 700;
+    font-display: swap;
+}
+
+/* Browser Default stuff and wiped after for consistency*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font:inherit; }
+
+/* tokens and stuff that i name so i no longer need to type hexcodes */
+
+:root {
+    --porcelain: #fdfdf5;
+    --evergreen: #233a23;
+    --sage: #c8c9a8;
+    --linen: #e1e1d5;
+    --carbon: #232323;
+
+
+    --uplifitbg: #fdfdf5;
+    --calmbg: #eeeee4;
+    --restorebg: #d8d8cc;
+    --groundbg: #232323;
+
+
+    --font-display: 'Amenti', serif;
+    --font-editorial: 'Crimson Text', serif;
+    --font-ui: 'Outfit', sans-serif;
+
+    --text-display: 52px;
+    --text-h1: 32px;
+    --text-h2: 24px;
+    --text-body: 16px;
+    --text-ui: 12px;
+    --text-label: 10px;
+
+    /* for spacing and easy resizing*/
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    --space-xl: 96px;
+
+    --nav-height: 64px;
+
+}
+
+
+/* navigational section */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--porcelain);
+    color: var(--carbon);
+    font-family: var(--font-ui);
+    min-height: 100vh;
+}
+
+
+/* Button time! smash and poke*/
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--evergreen);
+    color: var(--porcelain);
+    font-family: var(--font-ui);
+    font-size: var(--text-ui);
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    padding: 16px 32px;
+    border: 2px solid var(--evergreen);
+    transition: background-color 0.2s ease, color 0.2 ease;
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--evergreen);
+}
+
+.btn-ghost {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--evergreen);
+    font-family: var(--font-ui);
+    font-size: var(--text-ui);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    padding: 16px 32px;
+    border: 2px solid var(--carbon);
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-ghost:hover{
+    background-color: var(--carbon);
+    color: var(--porcelain);
+}
+
+
+/* breathing page finally!!!! */
+.breathing-page {
+    background-color: var(--porcelain);
+    overflow: hidden;
+}
+
+.breathing-screen {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+}
+
+/*nav bar*/
+.breathing-header {
+    border-bottom: 1px solid var(--linen);
+    position: relative;
+}
+
+.breathing-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 var(--space-lg);
+    height: var(--nav-height);
+}
+
+.breathing-nav .nav-links {
+    display: flex;
+    gap: var(--space-lg);
+}
+
+.breathing-nav .nav-links a {
+    font-family: var(--font-ui);
+    font-size: var(--text-ui);
+    color: var(--carbon);
+}
+
+.breathing-nav .nav-links li:first-child a {
+    font-weight: 700;
+    color: var(--evergreen);
+}
+
+.breathing-nav .nav-actions {
+    display:flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+.nav-logo {
+    font-family: var(--font-ui);
+    font-size: var(--text-ui);
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--evergreen);
+}
+
+/* two column things here so i dont forget */
+.breathing-content {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.breathing-text {
+    flex: 1;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.breathing-eyebrow {
+    font-family: var(--font-ui);
+    font-size: var(--text-ui);
+    letter-spacing: 0.1em; 
+    color: var(--carbon);
+    opacity: 0.6;
+}
+
+.breathing-headline {
+    font-family: var(--font-display);
+    font-size: clamp(80px, 10vw, 140px);
+    color: var(--evergreen);
+    line-height: 1;
+    opacity: 1;
+    letter-spacing: -0.01em;
+    transition: opacity 2s ease, letter-spacing 2s ease;
+}
+
+.breathing-exhale {
+    opacity: 0.6;
+    letter-spacing: 0.06em;
+}
+
+.breathing-sub {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: 20px;
+    color: var(--carbon);
+    line-height: 1.6;
+}
+
+.breathing-ctas {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+    max-width: 280px;
+}
+
+/*bottle right*/
+.breathing-bottle {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100%;
+    padding-top: var(--space-lg);
+}
+
+.breathing-bottle img {
+    max-height: 80vh;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-toggle { display:none; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* MOBILE REDESGINNNNNNNNN */
+@media (max-width: 1023px) {
+    .breathing-nav {
+        padding: 0 var(--space-sm)
+    }
+
+    .breathing-nav .nav-links { display: none; }
+   
+    .breathing-nav .nav-links.open {
+        display: flex; 
+        flex-direction: column;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        width: 100%;
+        background-color: var(--porcelain);
+        padding: var(--space-md);
+        gap: var(--space-md);
+        border-bottom: 1px solid var(--linen);
+        z-index: 99;
+     }
+
+
+    .nav-toggle { display: block; font-size: 20px; color: var(--carbon); }
+
+    .breathing-headline { font-size: clamp(48px, 16vw, 72px); }
+    
+    .breathing-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: var(--space-sm);
+    }
+
+    .breathing-bottle {
+        flex: none;
+        height: auto;
+        padding-top: 0;
+        width: 100%; 
+        justify-content: center;
+    }
+
+    .breathing-text {
+        align-items: center;
+        padding: var(--space-sm);
+    }
+
+    .breathing-ctas {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .breathing-inhale {
+        opacity: 1;
+        letter-spacing: -0.01em;
+    }
+}
