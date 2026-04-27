@@ -12,7 +12,321 @@
 <body class="shop-page">
 
     <!--Navigation should be same all pages-->
-    
+    <header class="site-header">
+      <nav class="site-nav">
+        <button class="nav-toggle" aria-label="Open menu">☰</button>
+        <a href="index.html" class="nav-logo">ESSENTIALLY AUSTRALIA</a>
+        <ul class="nav-links">
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Scent Memory</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button aria-label="Search">
+            <img src="assets/searchicon.svg" alt="" width="20" height="20">
+          </button>
+          <button aria-label="Cart">
+            <img src="assets/cart.svg" alt="" width="22" height="22">
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- desktop breadcrumbs only-->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li>
+                <a href="shop.html">Shop</a>
+            </li>
+            <li>Single Oils</li>
+        </ol>
+    </nav>
+
+    <main>
+
+        <!-- Shop header, the dark green block -->
+         <section class="shop-header">
+
+            <!-- mobile only label -->
+             <p class="shop-label">SINGLE OILS</p>
+
+             <h1 class="shop-title">One plant.
+                <br>One oil.
+             </h1>
+             <p class="shop-desc">Each oil distilled from a single Australian native botanical. Grown, harvested and bottled at source.</p>
+
+             <!-- stats bar mobile only-->
+            <ul class="shop-stats">
+                <li class="shop-stat">
+                    <strong>38+</strong>
+                    <span>Native Oils</span>
+                </li>
+
+                <li class="shop-stat">
+                    <strong>100% Pure</strong>
+                    <span>Ethically Sourced</span>
+                </li>
+
+                <li class="shop-stat">
+                    <strong>Byron Bay</strong>
+                    <span>Full Origin</span>
+                </li>
+            </ul>
+
+            <!-- Filter and sort section-->
+            <div class="shop-filter-bar">
+                <button class="filter-btn" aria-label="Filter and Sort products">
+                    <span class="filter-icon">≡</span>
+                </button>
+                <span class="shop-count">38+ oils</span>
+            </div>
+
+         </section>
+
+         <!--product listing part-->
+         <section class="product-list" aria-label="All Oils">
+
+            <!--zest myrtle (happy path)-->
+            <article class="product-card" data-feeling="uplift">
+                <figure class="product-img uplift-bg">
+                    <img src="assets/zest-myrtle.png" alt="Zest Myrtle essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot uplift-dot"></span>
+                        <span class="feeling-label">UPLIFT</span>
+                        <span class="product-badge badge-bestseller">BEST SELLER</span>
+                    </div>
+
+                    <h2 class="product-name">Zest Myrtle</h2>
+                    <p class="product-scent">green mango · citrus peel · fresh peel</p>
+                    <div class="product-footer">
+                        <p class="product-price">$22.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="product-zest-myrtle.html" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- Anise Myrtle -->
+            <article class="product-card" data-feeling="calm">
+                <figure class="product-img calm-bg">
+                    <img src="assets/anise-myrtle.png" alt="Anise Myrtle essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot calm-dot"></span>
+                        <span class="feeling-label">CALM</span>
+                    </div>
+
+                    <h2 class="product-name">Anise Myrtle</h2>
+                    <p class="product-scent">star anise · sweet licorice · warm herb</p>
+                    <div class="product-footer">
+                        <p class="product-price">$26.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+
+            <!-- eucalyptus -->
+            <article class="product-card" data-feeling="restore">
+                <figure class="product-img restore-bg">
+                    <img src="assets/eucalyptus.png" alt="Eucalyptus essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot calm-dot"></span>
+                        <span class="feeling-label">RESTORE</span>
+                    </div>
+
+                    <h2 class="product-name">Eucalyptus Aus.</h2>
+                    <p class="product-scent">eucalyptus leaf · cool camphor · fresh mint</p>
+                    <div class="product-footer">
+                        <p class="product-price">$19.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+            
+
+            <!-- Fragonia (happy path) -->
+
+            <article class="product-card" data-feeling="restore">
+                <figure class="product-img restore-bg">
+                    <img src="assets/fragonia.png" alt="Fragonia essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot restore-dot"></span>
+                        <span class="feeling-label">RESTORE</span>
+                        <span class="product-badge badge-stock">10 LEFT</span>
+                    </div>
+
+                    <h2 class="product-name">Fragonia</h2>
+                    <p class="product-scent">fragonia leaf · pinene</p>
+                    <div class="product-footer">
+                        <p class="product-price">$55.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="product-fragonia.html" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- honey myrtle -->
+            <article class="product-card" data-feeling="uplift">
+                <figure class="product-img uplift-bg">
+                    <img src="assets/honey-myrtle.png" alt="Honey Myrtle essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot uplift-dot"></span>
+                        <span class="feeling-label">UPLIFT</span>
+                    </div>
+
+                    <h2 class="product-name">Honey Myrtle</h2>
+                    <p class="product-scent">wildflower honey · lemon blossom · warm vanilla</p>
+                    <div class="product-footer">
+                        <p class="product-price">$22.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- eucalyptus radiata-->
+            <article class="product-card" data-feeling="restore">
+                <figure class="product-img restore-bg">
+                    <img src="assets/eucalyptus-radiata.png" alt="Eucalyptus Radiata essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot restore-dot"></span>
+                        <span class="feeling-label">RESTORE</span>
+                    </div>
+
+                    <h2 class="product-name">Eucalyptus Radiata</h2>
+                    <p class="product-scent">eucalyptol · limonene · warm vanilla</p>
+                    <div class="product-footer">
+                        <p class="product-price">$54.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+            <!--lemon ironbark-->
+            <article class="product-card" data-feeling="uplift">
+                <figure class="product-img uplift-bg">
+                    <img src="assets/lemon-myrtle.png" alt="Lemon Myrtle essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot uplift-dot"></span>
+                        <span class="feeling-label">UPLIFT</span>
+                    </div>
+
+                    <h2 class="product-name">Lemon Myrtle</h2>
+                    <p class="product-scent">lemon bark · eucalyptus leaf · light florals</p>
+                    <div class="product-footer">
+                        <p class="product-price">$22.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- lmeon tea tree-->
+            <article class="product-card" data-feeling="uplift">
+                <figure class="product-img uplift-bg">
+                    <img src="assets/lemon-tea-tree" alt="Lemon Tea Tree essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot uplift-dot"></span>
+                        <span class="feeling-label">UPLIFT</span>
+                    </div>
+
+                    <h2 class="product-name">Lemon Tea Tree</h2>
+                    <p class="product-scent">lemon drop · tea tree · fresh herbs</p>
+                    <div class="product-footer">
+                        <p class="product-price">$28.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+            <!--Kunzea-->
+            <article class="product-card" data-feeling="calm">
+                <figure class="product-img calm-bg">
+                    <img src="assets/kunzea" alt="Kunzea essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot calm-dot"></span>
+                        <span class="feeling-label">CALM</span>
+                    </div>
+
+                    <h2 class="product-name">Kunzea</h2>
+                    <p class="product-scent">kunzea leaf · cool camphor</p>
+                    <div class="product-footer">
+                        <p class="product-price">$25.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="product-card" data-feeling="ground">
+                <figure class="product-img ground-bg">
+                    <img src="assets/sandalwood" alt="Northern Sandalwod essential oil 12ml">
+                </figure>
+
+                <div class="product-info">
+                    <div class="product-meta">
+                        <span class="feeling-dot ground-dot"></span>
+                        <span class="feeling-label">GROUND</span>
+                    </div>
+
+                    <h2 class="product-name">Northern Sandalwood</h2>
+                    <p class="product-scent">creamy wood · dry earth</p>
+                    <div class="product-footer">
+                        <p class="product-price">$15.95
+                            <span class="price-size">12ml</span>
+                        </p>
+                        <a href="#" class="btn.view">View -></a>
+                    </div>
+                </div>
+            </article>
+         </section>
+
+         <!-- load more section -->
+         <div class="shop-load-more">
+            <button class="btn-load-more">Load More</button>
+         </div>
+    </main>
     
 </body>
 </html>

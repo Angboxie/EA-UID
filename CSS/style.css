@@ -4,7 +4,7 @@
 /* Amenti - local link */
 @font-face {
     font-family: "Amenti";
-    src: url('#') format('truetype');
+    src: url('assets/amentibold.ttf') format('truetype');
     font-weight: 700;
     font-display: swap;
 }
@@ -57,10 +57,10 @@ button { cursor: pointer; border: none; background: none; font:inherit; }
     --carbon: #232323;
 
 
-    --uplifitbg: #fdfdf5;
-    --calmbg: #eeeee4;
-    --restorebg: #d8d8cc;
-    --groundbg: #232323;
+    --upliftbg: #f3f8d0;
+    --calmbg: #e2eee2;
+    --restorebg: #E0E8E8;
+    --groundbg: #ecdaa6;
 
 
     --font-display: 'Amenti', serif;
@@ -416,3 +416,335 @@ body{
 .loading-sub.visible {
     opacity: 1;
 }
+
+
+
+/* Shop page*/
+
+.breadcrumb {
+    display: none;
+    padding: var(--space-sm) var(--space-lg);
+}
+
+.breadcrumb ol {
+    display: flex;
+    gap: var(--space-xs);
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--carbon);
+    opacity: 0.6;
+}
+
+/* adds '>' after every breadcrumb item automatically */
+.breadcrumb ol li::after {
+    content: '>';
+    margin-left: var(--space-xs);
+}
+
+/* removes the '>' from the last item so nothing comes after it */
+.breadcrumb ol li:last-child::after {
+    content: '';
+}
+
+/* Shop header, the big dark evergreen block */
+.shop-header {
+    background-color: var(--evergreen);
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.shop-label {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    letter-spacing: 0.15em;
+    color: var(--sage);
+}
+
+.shop-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 5vw, 56px);
+    color: var(--porcelain);
+    line-height: 1.1;
+}
+
+.shop-desc {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: var(--text-body);
+    color: var(--porcelain);
+    opacity: 0.8;
+    max-width: 600px;
+}
+
+/* Stats bar mobile only */
+.shop-stats {
+    display: flex;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
+}
+
+.shop-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+    padding-right: var(--space-sm);
+}
+
+.shop-start:last-child {
+    border-right: none;
+    padding-left: var(--space-sm);
+}
+
+.shop-stat strong {
+    font-family: var(--font-ui);
+    font-size: var(--text-ui);
+    font-weight: 700;
+    color: var(--porcelain);
+}
+
+.shop-stat span {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--sage);
+}
+
+/* filter bar*/
+.shop-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--space-sm);
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-family: var(--text-ui);
+    color: var(--porcelain);
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: var(--space-sm) var(--space-md);
+    letter-spacing: 0.05em;
+}
+
+.shop-count{
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--sage);
+}
+
+
+/* MOBILE FIRST product list the single column ones i'm doing */
+
+.product-list {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-sm);
+    gap: var(--space-sm);
+}
+
+.product-card {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--linen);
+    overflow: hidden;
+}
+
+
+/* background for the uh feeling bg colors */
+.uplift-bg {
+    background-color: var(--upliftbg);
+}
+.calm-bg {
+    background-color: var(--calmbg);
+}
+.restore-bg {
+    background-color: var(--restorebg);
+}
+.ground-bg {
+    background-color: var(--groundbg);
+}
+
+.product-img {
+    width: 100px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs);
+}
+
+.product-img img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.product-info {
+    flex: 1;
+    padding: var(--space-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.product-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+/* for the feeling dots */
+.feeling-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.uplift-dot {
+    background-color: var(--upliftbg);
+}
+
+.calm-dot {
+    background-color: var(--calmbg);
+}
+
+.restore-dot {
+    background-color: var(--restorebg);
+}
+
+.ground-dot {
+    background-color: var(--groundbg);
+}
+
+.feeling-label {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    letter-spacing: 0.1em;
+    color: var(--carbon);
+    opacity: 0.6;
+}
+
+/* badges */
+.product-badge {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 2px;
+    margin-left: auto;
+    letter-spacing: 0.05em;
+}
+
+.badge-bestseller, .badgestock {
+    background-color: #c0392b;
+    color: var(--porcelain);
+}
+
+
+/* specific product */
+.product-name {
+    font-family: var(--font-editorial);
+    font-size: var(--text-h2);
+    font-weight: 600;
+    color: var(--carbon);
+    line-height: 1.2;
+}
+
+.product-scent {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--carbon);
+    opacity: 0.6
+}
+
+.product-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: var(--space-xs);
+}
+
+.product-price {
+    font-family: var(--font-editorial);
+    font-size: var(--text-body);
+    font-weight: 600;
+    color: var(--carbon);
+}
+
+.price-size {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 400;
+    opacity: 0.5;
+    margin-left: 4px;
+}
+
+.btn-view {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 500;
+    color: var(--porcelain);
+    background-color: var(--evergreen);
+    padding: 6px 16px;
+    letter-spacing: 0.05em;
+}
+
+.shop-load-more {
+    padding: var(--space-lg);
+    display: flex;
+    justify-content: center;
+}
+
+.btn-load-more {
+    font-family: var(--font-ui);
+    font-size: var(--text-ui);
+    color: var(--carbon);
+    border: 1px solid var(--carbon);
+    padding: var(--space-sm) var(--space-xl);
+    letter-spacing: 0.01em;
+    width: 100%;
+    max-width: 400px;
+    cursor: pointer;
+}
+
+/* DESKTOP PART */
+
+@media (min-width: 1024px) {
+    .breadcrumb {display: none; }
+
+    .shop-stats { display: none; }
+
+
+    .product-list {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: var(--space-sm);
+    }
+
+    /* cards switch to vertical on desktop*/
+    .product-card {
+        flex-direction: column;
+    }
+
+    .product-img {
+        width: 100%;
+        min-width: unset;
+        height: 200px;
+        padding: var(--space-md);
+    }
+
+    .product-img img{
+        width: auto;
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
