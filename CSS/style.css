@@ -271,16 +271,6 @@ body{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* MOBILE REDESGINNNNNNNNN */
 @media (max-width: 1023px) {
     .site-nav {
@@ -495,7 +485,7 @@ body{
     padding-right: var(--space-sm);
 }
 
-.shop-start:last-child {
+.shop-stat:last-child {
     border-right: none;
     padding-left: var(--space-sm);
 }
@@ -525,7 +515,7 @@ body{
     display: flex;
     align-items: center;
     gap: var(--space-xs);
-    font-family: var(--text-ui);
+    font-family: var(--font-ui);
     color: var(--porcelain);
     border: 1px solid rgba(255,255,255,0.4);
     padding: var(--space-sm) var(--space-md);
@@ -718,7 +708,7 @@ body{
 /* DESKTOP PART */
 
 @media (min-width: 1024px) {
-    .breadcrumb {display: none; }
+    .breadcrumb {display: block; }
 
     .shop-stats { display: none; }
 
@@ -747,4 +737,5 @@ body{
         margin: 0 auto;
     }
 }
+
 
