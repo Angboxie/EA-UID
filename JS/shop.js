@@ -91,7 +91,7 @@ const products = [
 
     {
         feeling: 'ground',
-        name: 'Nonrthern Sandalwood',
+        name: 'Northern Sandalwood',
         scent: 'creamy wood · dry earth',
         price: '15.95',
         img: 'assets/sandalwood.png',

@@ -1,37 +1,16 @@
-
-/* for mobile toggles only*/
-const toggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-/*guard for only wire up the listener if both elements actually exist in the DOM*/
-if (toggle && navLinks) {
-    toggle.addEventListener('click', () => {
-        navlinks.classList.toggle('open');
-
-        /*swap the icon to reflect the current state, so burger when closed, x when open*/
-        toggle.textContent = navLinks.classList.contains('open') ? 'x' : '☰';
-    });
-}
-
-/*breathing headlines*/
+/*breathing headline animation*/
 const headline = document.querySelector('.breathing-headline');
 
 if (headline) {
     let inhale = true;
-
-    /* start on inhale immediately and not to wait for first tick*/
     headline.classList.add('breathing-inhale');
 
-    /*flip between breathing inhale and exhale every 2 seconds or so, total is 2+2 4 seconds*/
-    setInterval (() => {
+    setInterval(() => {
         inhale = !inhale;
         headline.classList.toggle('breathing-inhale', inhale);
         headline.classList.toggle('breathing-exhale', !inhale);
     }, 2000);
 }
-
-
-/* Since I was instructed to get rid of repeating things in HTML and put in JS, I put the nav in here!*/
 
 function renderNav() {
     const header = document.querySelector('.site-header');
@@ -56,6 +35,15 @@ function renderNav() {
             </div>
         </nav>
     `;
+
+    /* wire up toggle after nav exists in DOM */
+    const toggle = header.querySelector('.nav-toggle');
+    const navLinks = header.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+        toggle.textContent = navLinks.classList.contains('open') ? 'x' : '☰';
+    });
 }
 
 renderNav();
