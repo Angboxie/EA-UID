@@ -9,7 +9,7 @@ if (headline) {
         inhale = !inhale;
         headline.classList.toggle('breathing-inhale', inhale);
         headline.classList.toggle('breathing-exhale', !inhale);
-    }, 2000);
+    }, 3000);
 }
 
 function renderNav() {
@@ -25,14 +25,15 @@ function renderNav() {
                 <li><a href="#">Our Story</a></li>
                 <li><a href="#">Scent Memory</a></li>
             </ul>
-            <div class="nav-actions">
+            <nav class="nav-actions">
                 <button aria-label="Search">
                     <img src="assets/searchicon.svg" alt="" width="20" height="20">
                 </button>
-                <button aria-label="Cart">
+                <a href="cart.hmtl" aria-label="Cart" class="cart-link">
                     <img src="assets/cart.svg" alt="" width="22" height="22">
-                </button>
-            </div>
+                    <span class="cart-count"></span>
+                </a>
+            </nav>
         </nav>
     `;
 
@@ -44,6 +45,15 @@ function renderNav() {
         navLinks.classList.toggle('open');
         toggle.textContent = navLinks.classList.contains('open') ? 'x' : '☰';
     });
+
+    updateCartCount();
+}
+
+function updateCartCount() {
+    const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
+    const total = cart.reduce((sum, item) => sum + item.qty, 0);
+    const badge = document.querySelector('.cart-count');
+    if (badge) badge.textContent = total > 0 ? total : '';
 }
 
 renderNav();

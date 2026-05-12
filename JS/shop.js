@@ -96,7 +96,7 @@ const products = [
         price: '15.95',
         img: 'assets/sandalwood.png',
         link: '#'
-    }
+    },
 ];
 
 /* Now this is the rendering that puts it in. I used loops through products, and then builds each card
@@ -115,7 +115,6 @@ function renderProducts(productArray) {
         }
 
         /*build the card html*/
-
         list.innerHTML += `
             <article class="product-card" data-feeling="${p.feeling}">
                 <figure class="product-img ${p.feeling}-bg">
