@@ -29,7 +29,7 @@ function renderNav() {
                 <button aria-label="Search">
                     <img src="assets/searchicon.svg" alt="" width="20" height="20">
                 </button>
-                <a href="cart.hmtl" aria-label="Cart" class="cart-link">
+                <a href="cart.html" aria-label="Cart" class="cart-link">
                     <img src="assets/cart.svg" alt="" width="22" height="22">
                     <span class="cart-count"></span>
                 </a>

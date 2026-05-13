@@ -56,7 +56,7 @@ tabBtns.forEach(btn => {
 });
 
 function flyToCart(fromBtn) {
-    const cartIcon = document.querySelector('.site-nav .nav-actions button[aria-label="Cart"] img');
+    const cartIcon = document.querySelector('.cart-link img');
     if (!cartIcon) return;
 
     const from = fromBtn.getBoundingClientRect();
