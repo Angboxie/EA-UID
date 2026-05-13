@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Essentially Australia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/main.js" defer></script>
+    <script src="JS/cart.js" defer></script>
+</head>
+
+<body class="cart-page">
+    <header class="site-header"></header>
+
+    <main class="cart-main">
+
+        <header class="cart-header">
+            <a href="shop.html" class="cart-back">← Continue</a>
+            <h1 class="cart-title">Your Cart</h1>
+            <span class="cart-item-count"></span>
+        </header>
+
+        <!-- cart shipping bar status -->
+        <section class="cart-shipping-bar">
+            <p class="shipping-label">UNLOCKED FREE SHIPPING</p>
+            <span class="shipping-progress">
+                <span class="shipping-fill"></span>
+            </span>
+        </section>
+        
+        <!-- cart injection via js instead of html for responsiveness and automation -->
+        <ul class="cart-items" aria-label="Cart items"></ul>
+
+
+        <!-- order summary -->
+        <section class="cart-summary">
+            <dl class="summary-rows">
+                <dt>Subtotal</dt>
+                <dd class="summary-subtotal"></dd>
+                <dt>Shipping</dt>
+                <dd class="summary-shipping"></dd>
+                <dt>Tax</dt>
+                <dd>Calculated at Checkout</dd>
+            </dl>
+
+            <p class="summary-total-label">TOTAL</p>
+            <p class="summary-total"></p>
+
+            <a href="checkout.html" class="btn-primary">Proceed To Checkout</a>
+            <a href="shop.html" class="btn-ghost">← Continue Shopping</a>
+        </section>
+
+    </main>
+    
+</body>
+</html>
