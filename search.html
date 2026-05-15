@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search - Essentially Australia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/main.js" defer></script>
+    <script src="JS/search.js" defer></script>
+</head>
+<body class="search-page">
+    <header class="site-header"></header>
+
+    <main class="search-main">
+
+        <!-- search input bar -->
+        <section class="search-bar-wrap">
+            <img src="assets/searchicon.svg" alt="" width="20" height="20" class="search-icon">
+            
+            <!-- autofocus helps with cursor straight into search box when page loads -->
+            <input
+                id="search-input"
+                class="search-input"
+                type="search"
+                placeholder="Search oils, or moods, or ingredients"
+                autocomplete="off"
+                autofocus 
+            >
+            <a href="shop.html" class="search-cancel">cancel</a>
+        </section>
+
+        <!-- empty state: shown when no query typed yet -->
+        <section class="search-empty" id="search-empty">
+
+            <section class="search-section">
+                <p class="search-section-label">HOW DO YOU WANT TO FEEL?</p>
+                <ul class="feeling-chips">
+                    <li><button class="feeling-chip uplift-chip" data-feeling="uplift">Uplift</button></li>
+                    <li><button class="feeling-chip calm-chip" data-feeling="calm">Calm</button></li>
+                    <li><button class="feeling-chip restore-chip" data-feeling="restore">Restore</button></li>
+                    <li><button class="feeling-chip ground-chip" data-feeling="ground">Ground</button></li>
+                </ul>
+            </section>
+
+            <section class="search-section">
+                <p class="search-section-label">RECENT SEARCHES</p>
+                
+                <!-- injected by search.js -->
+                <ul class="recent-list" id="recent-list"></ul>
+            </section>
+
+            <section class="search-section">
+                <p class="search-section-label">TRENDING NOW</p>
+                <ul class="trending-list">
+                    <li><button class="trending-item" data-query="Lemon Myrtle">✦ Lemon Myrtle</button></li>
+                    <li><button class="trending-item" data-query="Northern Sandalwood">✦ Northern Sandalwood</button></li>
+                    <li><button class="trending-item" data-query="Anise Myrtle">✦ Anise Myrtle</button></li>
+                </ul>
+            </section>
+
+        </section>
+
+        <!-- results state: shown when query is typed -->
+        <section class="search-results" id="search-results" hidden>
+
+            <header class="results-header">
+                <p class="results-count" id="results-count"></p>
+                <p class="results-filter">Filter & Sort</p>
+            </header>
+
+            <!-- matched products -->
+            <ul class="search-product-list" id="results-list"></ul>
+
+            <!-- you may also like -->
+            <section class="search-also" id="search-also" hidden>
+                <p class="search-section-label">You May Also Like...</p>
+                <ul class="search-product-list" id="also-list"></ul>
+            </section>
+
+        </section>
+
+    </main>
+</body>
+</html>
