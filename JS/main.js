@@ -26,9 +26,9 @@ function renderNav() {
                 <li><a href="#">Scent Memory</a></li>
             </ul>
             <nav class="nav-actions">
-                <button aria-label="Search">
+                <a href="search.html" aria-label="Search">
                     <img src="assets/searchicon.svg" alt="" width="20" height="20">
-                </button>
+                </a>
                 <a href="cart.html" aria-label="Cart" class="cart-link">
                     <img src="assets/cart.svg" alt="" width="22" height="22">
                     <span class="cart-count"></span>
