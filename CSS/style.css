@@ -1537,6 +1537,9 @@ body{
     text-align: center;
 }
 
+.search-empty[hidden],
+.search-results[hidden] { display: none; }
+
 @media (min-width: 1024px) {
     .search-empty,
     .search-results { max-width: 900px; margin: 0 auto; }

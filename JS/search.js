@@ -30,7 +30,7 @@ const alsoLikeList       = document.getElementById('also-list');
 const resultsCountLabel  = document.getElementById('results-count');
 const recentSearchList   = document.getElementById('recent-list');
 
-/* build a single product card. btw the ${} to clarify i forgot is to insert variable values*/
+/* build a single product card. btw the ${} to clarify i forgot is to insert variable values */
 
 function buildCard(p) {
     const li = document.createElement('li');
@@ -53,18 +53,17 @@ function buildCard(p) {
     return li;
 }
 
-/* filter products by name, scent or feeling */
+/* filter products by name, scent or feeling (predictive AI, searches for individual letters/words) */
 
 function filterProducts(query) {
     const q = query.toLowerCase();
     return products.filter(p =>
         p.name.toLowerCase().includes(q) ||
-        p.scent.toLowerCase().includes(q) ||
         p.feeling.toLowerCase().includes(q)
     );
 }
 
-/* run search and show results */
+/* run search and show results, shows only relevant results*/
 
 function runSearch(query) {
     if (!query.trim()) {
@@ -96,7 +95,7 @@ function runSearch(query) {
 }
 
 
-/* I plan to save it in storagesession so that way it is more responsive */
+/* I plan to save it in storage session so that way it is more responsive */
 function getRecent() {
     return JSON.parse(sessionStorage.getItem('ea-recent') || '[]');
 }
@@ -106,6 +105,37 @@ function saveRecent(query) {
     recent.unshift(query);
     sessionStorage.setItem('ea-recent', JSON.stringify(recent.slice(0, 5)));
     renderRecent();
+}
+
+/* renders recent searches from storagesession into recent list*/
+function renderRecent() {
+    recentSearchList.innerHTML = '';
+
+    getRecent().forEach(savedQuery => {
+        const listItem = document.createElement('li');
+        listItem.className = 'recent-item';
+        listItem.innerHTML = `
+            <button class="recent-query" data-query="${savedQuery}">
+                <img src="assets/searchicon.svg" alt="" width="14" height="14"> ${savedQuery}
+            </button>
+            <button class="recent-remove" data-query="${savedQuery}" aria-label="Remove">✕</button>
+        `;
+
+        /* clicking recent item fills the search box and runs the search */
+        listItem.querySelector('.recent-query').addEventListener('click', () => {
+            searchInput.value = savedQuery;
+            runSearch(savedQuery);
+        });
+
+        /* clicking x removes that item from sessionStorage and re-renders  list*/
+        listItem.querySelector('.recent-remove').addEventListener('click', () => {
+            const updated = getRecent().filter(r => r !== savedQuery);
+            sessionStorage.setItem('ea-recent', JSON.stringify(updated));
+            renderRecent();
+        });
+
+        recentSearchList.appendChild(listItem);
+    });
 }
 
 
