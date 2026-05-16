@@ -138,4 +138,15 @@ function renderProducts(productArray) {
     });
 }
 
+
 renderProducts(products);
+
+/* clicking a non-interactive product card shows a message to go back since not part o the demo */
+document.querySelector('.product-list').addEventListener('click', e => {
+    const link = e.target.closest('.btn-view');
+    if (!link) return;
+    if (link.getAttribute('href') === '#') {
+        e.preventDefault();
+        alert('Only Zest Myrtle and Fragonia are interactive in this demo.');
+    }
+});

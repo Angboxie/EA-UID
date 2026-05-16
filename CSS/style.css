@@ -761,7 +761,6 @@ body{
 }
 
 .product-gallery {
-    background-color: var(--upliftbg);
     padding: var(--space-md);
     display: flex;
     flex-direction: column;

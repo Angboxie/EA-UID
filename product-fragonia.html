@@ -3,53 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zest Myrtle - Essentially Australia</title>
+    <title>Fragonia - Essentially Australia</title>
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/main.js" defer></script>
-    <script src="JS/product-zest-myrtle.js" defer></script>
-
+    <script src="JS/product-fragonia.js" defer></script>
 </head>
 <body class="product-page">
     <header class="site-header"></header>
 
     <!-- breadcrumb for this specific section-->
-     <nav class="breadcrumb" aria-label="Breadcrumb">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
         <ol>
             <li><a href="shop.html">Shop</a></li>
             <li><a href="shop.html">By Feeling</a></li>
-            <li><a href="shop.html">Uplift</a></li>
-            <li>Zest Myrtle</li>
+            <li><a href="shop.html">Restore</a></li>
+            <li>Fragonia</li>
         </ol>
-     </nav>
+    </nav>
 
-     <main class="product-main">
-        
-        
+    <main class="product-main">
+
         <!-- The left side, where the image gallery exists-->
-        <section class="product-gallery uplift-bg">
+        <section class="product-gallery restore-bg">
 
-            <!-- this is the thumbnail strip desktop only-->
+            <!-- thumbnail strip desktop only-->
             <nav class="product-thumbs" aria-label="Product Image Thumbnails">
                 <button class="thumb active" aria-label="View Bottle Image">
-                    <img src="assets/zest-myrtle.png" alt="Zest Myrtle Product Image">
-                </button>
-                <button class="thumb" aria-label="View leaf image">
-                    <img src="assets/zest-leaf.png" alt="Zest Myrtle Leaf">
+                    <img src="assets/fragonia.png" alt="Fragonia Product Image">
                 </button>
                 <button class="thumb" aria-label="View More">+2</button>
             </nav>
 
             <!-- main image -->
-            <figure class="product-hero-img uplift-bg">
-                <img src="assets/zest-myrtle.png" alt="Zest Myrtle Essential oil">
+            <figure class="product-hero-img restore-bg">
+                <img src="assets/fragonia.png" alt="Fragonia Essential Oil">
             </figure>
 
-            <!--scent chips that are below image on desktop-->
+            <!--scent chips below image on desktop-->
             <ul class="product-scent-chips">
-                <li>Lemon Zest</li>
-                <li>Mango Skin</li>
-                <li>Citrus Peel</li>
-                <li>Fresh Grass</li>
+                <li>Fragonia Leaf</li>
+                <li>Pinene</li>
+                <li>Soft Florals</li>
+                <li>Clean Air</li>
             </ul>
         </section>
 
@@ -57,25 +52,25 @@
 
             <!--feeling tags + badges-->
             <header class="product-tags">
-                <span class="product-feeling-tag">01 · UPLIFT</span>
-                <span class="product-badge badge-bestseller">BEST SELLER</span>
+                <span class="product-feeling-tag">03 · RESTORE</span>
+                <span class="product-badge badge-stock">10 LEFT</span>
             </header>
 
             <!-- names and botanics -->
             <header class="product-header">
-                <h1 class="product-title">Zest Myrtle</h1>
-                <p class="product-botanical">Backhousia citriodora Var. A</p>
+                <h1 class="product-title">Fragonia</h1>
+                <p class="product-botanical">Agonis fragrans</p>
             </header>
 
             <!--reviews-->
             <section class="product-reviews">
                 <span class="product-stars">★★★★★</span>
-                <span class="product-review-count">4.9 · 39 Reviews</span>
+                <span class="product-review-count">4.8 · 24 Reviews</span>
             </section>
 
             <!-- price -->
             <p class="product-price-display">
-                $<span id="current-price">22.95</span>
+                $<span id="current-price">55.95</span>
                 <span class="price-size" id="current-size">· 12ml</span>
             </p>
 
@@ -83,9 +78,9 @@
             <fieldset class="product-sizes">
                 <legend class="product-sizes-label">Size</legend>
                 <ul class="size-options">
-                    <button class="size-btn active" data-price="22.95" data-size="12ml">12ml</button>
-                    <button class="size-btn" data-price="38.95" data-size="25ml">25ml</button>
-                    <button class="size-btn" data-price="64.95" data-size="50ml">50ml</button>
+                    <button class="size-btn active" data-price="55.95" data-size="12ml">12ml</button>
+                    <button class="size-btn" data-price="89.95" data-size="25ml">25ml</button>
+                    <button class="size-btn" data-price="149.95" data-size="50ml">50ml</button>
                 </ul>
             </fieldset>
 
@@ -93,13 +88,13 @@
                 <p class="product-sizes-label">Best For</p>
                 <ul class="bestfor-chips">
                     <li>Diffuser</li>
+                    <li>Meditation</li>
                     <li>Skin & Body</li>
-                    <li>Home & Clean</li>
                 </ul>
             </section>
 
             <!-- description -->
-            <p class="product-desc">Steam distilled same day as harvest. A zesty tropical burst unique to Byron Bay's hinterland - greener and more vibrant than traditional lemon oils.</p>
+            <p class="product-desc">One of Australia's most unique botanicals. Fragonia is prized for its balanced chemistry, with equal parts terpenes, oxides and monoterpene alcohols. This makes it perfect for both calming and clarifying.</p>
 
             <section class="product-actions">
                 <footer class="quantity-stepper">
@@ -108,7 +103,7 @@
                     <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
                 </footer>
                 <button class="btn-add-cart" id="add-to-cart">
-                    Add To Cart - $<span id="cart-price">22.95</span>
+                    Add To Cart - $<span id="cart-price">55.95</span>
                 </button>
             </section>
         </section>
@@ -121,25 +116,23 @@
 
         <section class="tab-content active" id="tab-facts">
             <table class="facts-table">
-                <tr><td>Botanical name</td><td>Backhousia citriodora Var. A</td></tr>
-                <tr><td>Origin</td><td>Byron Bay, NSW</td></tr>
+                <tr><td>Botanical name</td><td>Agonis fragrans</td></tr>
+                <tr><td>Origin</td><td>Western Australia</td></tr>
                 <tr><td>Extraction</td><td>Steam distilled</td></tr>
-                <tr><td>Key Compound</td><td>Citral 90%+</td></tr>
+                <tr><td>Key Compound</td><td>1,8 Cineole, Linalool</td></tr>
                 <tr><td>TGA listed</td><td>Yes</td></tr>
-                <tr><td>Blends well with</td><td>Lemon Myrtle, Sandalwood</td></tr>
+                <tr><td>Blends well with</td><td>Sandalwood, Kunzea</td></tr>
             </table>
         </section>
 
         <section class="tab-content" id="tab-howto">
-            <p>Add 3–5 drops to a diffuser with water. For topical use, dilute with a carrier oil before applying to skin.</p>
+            <p>Add 3–5 drops to a diffuser. For topical use, dilute 1–2% in a carrier oil and apply to pulse points or chest.</p>
         </section>
 
         <section class="tab-content" id="tab-reviews">
-            <p>4.9 · 39 reviews</p>
+            <p>4.8 · 24 reviews</p>
         </section>
-     </main>
 
-     
-
+    </main>
 </body>
 </html>
