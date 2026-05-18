@@ -21,14 +21,14 @@ const products = [
 ];
 
 /* DOM references */
-const searchInput        = document.getElementById('search-input');
-const emptyStateSection  = document.getElementById('search-empty');
-const resultsSection     = document.getElementById('search-results');
+const searchInput = document.getElementById('search-input');
+const emptyStateSection = document.getElementById('search-empty');
+const resultsSection = document.getElementById('search-results');
 const resultsProductList = document.getElementById('results-list');
-const alsoLikeSection    = document.getElementById('search-also');
-const alsoLikeList       = document.getElementById('also-list');
-const resultsCountLabel  = document.getElementById('results-count');
-const recentSearchList   = document.getElementById('recent-list');
+const alsoLikeSection = document.getElementById('search-also');
+const alsoLikeList = document.getElementById('also-list');
+const resultsCountLabel = document.getElementById('results-count');
+const recentSearchList = document.getElementById('recent-list');
 
 /* build a single product card. btw the ${} to clarify i forgot is to insert variable values */
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scent Memory - Essentially Australia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/main.js" defer></script>
+    <script src="JS/scent-memory.js" defer></script>
+</head>
+
+<body class="scent-memory-page">
+    <header class="site-header"></header>
+
+    <main class="scent-memory-main">
+        <header class="scent-memory-header">
+            <p class="scent-memory-eyebrow">GenAI Feature</p>
+            <h1 class="scent-memory-title">Scent Memory</h1>
+            <p class="scent-memory-desc">Describe how you feel. We'll find the oil for you.</p>
+        </header>
+
+        <!-- making the chat window -->
+         <section class="scent-chat" id="scent-chat">
+            <!-- messages injected by scent-memory.js -->
+        </section>
+
+        <!-- results injected this place -->
+        <section class="scent-results" id="scent-results" hidden></section>
+
+        <!-- input bar -->
+        <section class="scent-input-wrap">
+            <input
+                id="scent-input"
+                class="scent-input"
+                type="text"
+                placeholder="e.g. I feel overwhelmed and can't focus"
+                autocomplete="off"
+            >
+            <button class="scent-send" id="scent-send" aria-label="Send">→</button>
+        </section>
+
+    </main>
+
+    
+</body>
+</html>

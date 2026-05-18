@@ -1,6 +1,7 @@
 /*breathing headline animation*/
 const headline = document.querySelector('.breathing-headline');
 
+/* breathing headline animation and toggles inhale exhale every 3s */
 if (headline) {
     let inhale = true;
     headline.classList.add('breathing-inhale');
@@ -23,7 +24,7 @@ function renderNav() {
             <ul class="nav-links">
                 <li><a href="shop.html">SHOP</a></li>
                 <li><a href="#">Our Story</a></li>
-                <li><a href="#">Scent Memory</a></li>
+                <li><a href="scent-memory.html">Scent Memory</a></li>
             </ul>
             <nav class="nav-actions">
                 <a href="search.html" aria-label="Search">

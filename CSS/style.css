@@ -1545,3 +1545,181 @@ body{
 
     .search-product-list { grid-template-columns: repeat(4, 1fr); }
 }
+
+
+/* new css for the scent memory part*/
+
+.scent-memory-main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--space-md);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.scent-memory-eyebrow {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    letter-spacing: 0.15em;
+    color: var(--evergreen);
+    opacity: 0.6;
+}
+
+.scent-memory-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 6vw, 56px);
+    color: var(--carbon);
+    line-height: 1.1;
+}
+
+.scent-memory-desc {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: var(--text-body);
+    color: var(--carbon);
+    opacity: 0.6;
+}
+
+/* to style the chat */
+.scent-chat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.scent-bubble {
+    font-family: var(--font-ui);
+    font-size: var(--text-body);
+    padding: var(--space-sm) var(--space-md);
+    max-width: 80%;
+    line-height: 1.5;
+}
+
+.scent-bubble--user { 
+    background-color: var(--evergreen); 
+    color: var(--porcelain); 
+    align-self: flex-end; 
+}
+
+.scent-bubble--assistant {
+    background-color: var(--linen);
+    color: var(--carbon);
+    align-self: flex-start;
+}
+
+/* cards */
+.scent-results { display: flex; flex-direction: column; gap: var(--space-sm); }
+
+.scent-rec-card {
+    display: flex;
+    border: 1px solid var(--linen);
+    overflow: hidden;
+}
+
+.scent-rec-img {
+    width: 100px;
+    min-width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-xs);
+}
+
+.scent-rec-img img {
+    width: 100%;
+     height: 100px;
+      object-fit: contain;
+}
+
+.scent-rec-info {
+    flex: 1;
+    padding: var(--space-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.scent-rec-feeling {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--carbon);
+    opacity: 0.6;
+}
+
+.scent-rec-name {
+    font-family: var(--font-editorial);
+    font-size: var(--text-h2);
+    color: var(--carbon);
+}
+
+.scent-rec-reason {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: var(--text-label);
+    color: var(--carbon);
+    opacity: 0.7;
+    line-height: 1.5;
+}
+
+.scent-rec-price {
+    font-family: var(--font-editorial);
+    font-size: var(--text-body);
+    font-weight: 600;
+    color: var(--carbon);
+    margin-top: auto;
+}
+
+/* input section*/
+.scent-input-wrap {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--carbon);
+    position: sticky;
+    bottom: var(--space-sm);
+    background-color: var(--porcelain);
+}
+
+.scent-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-family: var(--font-ui);
+    font-size: var(--text-body);
+    color: var(--carbon);
+    background: none;
+    padding: var(--space-sm) var(--space-md);
+}
+
+.scent-input::placeholder {
+    color: var(--carbon);
+    opacity: 0.4;
+}
+
+.scent-send {
+    font-family: var(--font-ui);
+    color: var(--porcelain);
+    background-color: var(--evergreen);
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.scent-send:hover {
+    background-color: var(--carbon);
+}
+
+.scent-send:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+@media (max-width: 1023px) {
+    .scent-rec-card { flex-direction: column; }
+    .scent-rec-img { width: 100%; min-width: unset; height: clamp(140px, 20vw, 200px); }
+    .scent-rec-img img { width: auto; height: 100%; margin: 0 auto; }
+}
