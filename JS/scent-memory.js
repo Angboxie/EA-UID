@@ -1,4 +1,4 @@
-const OPENAI_API_KEY = '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';
+const OPENAI_API_KEY = 'open_ai_key_here_not_added_for_security_reasons';
 
 const products = [
     /* uplift */
