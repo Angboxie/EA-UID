@@ -51,7 +51,7 @@ function renderShippingBar(subtotal) {
 }
 
 
-/* ── ORDER SUMMARY ── */
+/* order summary in the cart */
 
 function renderSummary(subtotal, shipping) {
     const total = subtotal + shipping;

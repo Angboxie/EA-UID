@@ -2,7 +2,7 @@
 const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
 
 
-/* ── CALCULATIONS ── */
+/* calculations */
 
 function getSubtotal() {
     return cart.reduce((sum, item) => sum + item.price * item.qty, 0);
@@ -126,7 +126,7 @@ document.querySelectorAll('.shipping-option input').forEach(opt => {
 
 /* buttons */
 
-/* step 1 → 2: pull address into delivering to display */
+/* step 1 → 2: pull address into delivering to display, puts custom address*/
 document.getElementById('btn-to-shipping').addEventListener('click', () => {
     const addr = document.getElementById('address').value;
     const city = document.getElementById('city').value;
@@ -136,13 +136,13 @@ document.getElementById('btn-to-shipping').addEventListener('click', () => {
     goToStep(2);
 });
 
-/* step 2 → 3: show totals before payment */
+/* step 2 → 3: show totals before payment, pulls and calculates total with btn to payment showing there*/
 document.getElementById('btn-to-payment').addEventListener('click', () => {
     showTotals();
     goToStep(3);
 });
 
-/* step 3 → confirmation */
+/* step 3 → confirmation with show of orders also*/
 document.getElementById('btn-place-order').addEventListener('click', () => {
     showConfirmation();
     goToStep(4);

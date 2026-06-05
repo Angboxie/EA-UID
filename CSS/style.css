@@ -99,7 +99,7 @@ body{
 }
 
 
-/* Buttons*/
+/* Global buttons*/
 .btn-primary {
     display: block;
     width: 100%;
@@ -139,7 +139,7 @@ body{
 }
 
 
-/*nav bar*/
+/*global navigation bar, will be used by JS*/
 .site-header {
     border-bottom: 1px solid var(--linen);
     position: relative;
@@ -585,7 +585,7 @@ body{
 }
 
 
-/* background for the feeling bg colors */
+/* feeling categories for background colors */
 .uplift-bg {
     background-color: var(--upliftbg);
 }
@@ -629,7 +629,7 @@ body{
     min-height: 20px;
 }
 
-/* for the feeling dots, individual colors and sizes*/
+/* for the feeling dots, individual colors and sizes, indicators*/
 .feeling-dot {
     width: 8px;
     height: 8px;
@@ -661,7 +661,7 @@ body{
     opacity: 0.6;
 }
 
-/* badges (fully optional) */
+/* badges (fully optional), product badges for 10 left & best sellers */
 .product-badge {
     font-family: var(--font-ui);
     font-size: var(--text-label);
@@ -748,7 +748,7 @@ body{
     cursor: pointer;
 }
 
-/* DESKTOP Counterpart*/
+/* DESKTOP Counterpart, shop desktop override*/
 
 @media (min-width: 1024px) {
     .breadcrumb {display: block; }
@@ -1039,9 +1039,21 @@ body{
     font-weight: 700;
 }
 
+/* overall styling rules of the sections on the bottom of page*/
 .tab-content { display: none; padding: var(--space-md); }
 .tab-content.active { display: block; }
 
+.tab-content p {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: var(--text-body);
+    color: var(--carbon);
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+
+/* facts table with two seperate tables*/
 .facts-table {
     width: 100%;
     border-collapse: collapse;
@@ -1061,6 +1073,60 @@ body{
     width: 40%;
 }
 
+/* Reviews section with blocks, product review tab*/
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.review-item {
+    border-bottom: 1px solid var(--linen);
+    padding-bottom: var(--space-md);
+}
+
+.review-item:last-child {
+    border-bottom: none;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+
+.review-stars {
+    color: var(--evergreen);
+    font-size: var(--text-body);
+}
+
+.review-author {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    font-weight: 700;
+    color: var(--carbon);
+}
+
+.review-date {
+    font-family: var(--font-ui);
+    font-size: var(--text-label);
+    color: var(--carbon);
+    opacity: 0.4;
+    margin-left: auto;
+}
+
+.review-body {
+    font-family: var(--font-editorial);
+    font-style: italic;
+    font-size: var(--text-body);
+    color: var(--carbon);
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+/* desktop counterpart for product page*/
 @media (min-width: 1024px) {
     .breadcrumb { display: block; }
     .shop-stats { display: none; }
@@ -1754,10 +1820,7 @@ body{
 }
 
 
-
-
-
-/* Checkout page */
+/* Checkout page with 3 step flow */
 .checkout-main {
     max-width: 480px;
     margin: 0 auto;
@@ -2023,7 +2086,7 @@ body{
     text-align: center;
 }
 
-/* confirmation */
+/* confirmation of order */
 .confirmation-check {
     width: 80px;
     height: 80px;
