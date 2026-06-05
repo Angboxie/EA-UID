@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Essentially Australia</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/main.js" defer></script>
+    <script src="JS/checkout.js" defer></script>
+</head>
+
+<body class="checkout-page">
+    <header class="site-header"></header>
+
+    <main class="checkout-main">
+
+        <!-- step indicator (1,2,3) -->
+        <nav class="checkout-steps" aria-label="Checkout steps">
+            <ol class="steps-list">
+                <li class="step active" id="step-indicator-1">
+                    <span class="step-dot">1</span>
+                    <span class="step-label">Contact</span>
+                </li>
+                <li class="step" id="step-indicator-2">
+                    <span class="step-dot">2</span>
+                    <span class="step-label">Shipment</span>
+                </li>
+                <li class="step" id="step-indicator-3">
+                    <span class="step-dot">3</span>
+                    <span class="step-label">Payment</span>
+                </li>
+            </ol>
+        </nav>
+
+        <!-- step 1: contact + delivery -->
+        <section class="checkout-step active" id="step-1">
+
+            <header class="checkout-section-header">
+                <p class="checkout-section-label">CONTACT</p>
+            </header>
+
+            <fieldset class="checkout-fields">
+                <legend class="visually-hidden">Contact details</legend>
+                <label class="field-label" for="email">Email</label>
+                <input class="field-input" id="email" type="email" placeholder="yourname@email.com">
+            </fieldset>
+
+            <header class="checkout-section-header">
+                <p class="checkout-section-label">DELIVERY ADDRESS</p>
+            </header>
+
+            <fieldset class="checkout-fields">
+                <legend class="visually-hidden">Delivery address</legend>
+                <label class="field-label" for="fullname">Full Name</label>
+                <input class="field-input" id="fullname" type="text" placeholder="Full name">
+
+                <label class="field-label" for="address">Address</label>
+                <input class="field-input" id="address" type="text" placeholder="Street address">
+
+                <section class="field-row">
+                    <section class="field-group">
+                        <label class="field-label" for="city">City</label>
+                        <input class="field-input" id="city" type="text" placeholder="City">
+                    </section>
+                    <section class="field-group">
+                        <label class="field-label" for="postcode">Post Code</label>
+                        <input class="field-input" id="postcode" type="text" placeholder="Postcode">
+                    </section>
+                </section>
+
+                <label class="field-label" for="state">State</label>
+                <input class="field-input" id="state" type="text" placeholder="State">
+            </fieldset>
+
+            <button class="btn-primary" id="btn-to-shipping">Continue To Shipping →</button>
+        </section>
+
+
+        <!-- step 2: shipping method -->
+        <section class="checkout-step" id="step-2">
+
+            <header class="checkout-section-header">
+                <p class="checkout-section-label">SHIPPING METHOD</p>
+            </header>
+
+            <ul class="shipping-options">
+                <li class="shipping-option selected">
+                    <label>
+                        <input type="radio" name="shipping" value="free" data-label="Standard · 3–5 business days" checked>
+                        <span class="shipping-dot"></span>
+                        <span class="shipping-info"><strong>Standard</strong><span>3–5 business days</span></span>
+                        <span class="shipping-price">FREE</span>
+                    </label>
+                </li>
+                <li class="shipping-option">
+                    <label>
+                        <input type="radio" name="shipping" value="express" data-label="Express · 1–2 business days">
+                        <span class="shipping-dot"></span>
+                        <span class="shipping-info"><strong>Express</strong><span>1–2 business days</span></span>
+                        <span class="shipping-price">$9.95</span>
+                    </label>
+                </li>
+                <li class="shipping-option">
+                    <label>
+                        <input type="radio" name="shipping" value="overnight" data-label="Overnight · Next business day">
+                        <span class="shipping-dot"></span>
+                        <span class="shipping-info"><strong>Overnight</strong><span>Next business day</span></span>
+                        <span class="shipping-price">$14.95</span>
+                    </label>
+                </li>
+            </ul>
+
+            <header class="checkout-section-header">
+                <p class="checkout-section-label">DELIVERING TO</p>
+            </header>
+
+            <!-- address pulled from step 1 by js -->
+            <p class="field-input" id="delivering-to-address">—</p>
+
+            <button class="btn-primary" id="btn-to-payment">Continue To Payment →</button>
+            <button class="btn-ghost" id="back-to-contact">← Back to Contact</button>
+        </section>
+
+
+        <!-- step 3: payment -->
+        <section class="checkout-step" id="step-3">
+
+            <header class="checkout-section-header">
+                <p class="checkout-section-label">PAYMENT METHOD</p>
+            </header>
+
+            <!-- payment type tabs -->
+            <nav class="payment-methods">
+                <button class="payment-method-btn active" data-method="card">Card</button>
+                <button class="payment-method-btn" data-method="apple">Apple Pay</button>
+                <button class="payment-method-btn" data-method="paypal">PayPal</button>
+                <button class="payment-method-btn" data-method="afterpay">Afterpay</button>
+            </nav>
+
+            <!-- card fields, hidden when non-card method selected -->
+            <fieldset class="checkout-fields" id="card-form">
+                <legend class="visually-hidden">Card details</legend>
+                <label class="field-label" for="card-number">Card Number</label>
+                <input class="field-input" id="card-number" type="text" placeholder="4242 4242 4242 4242" maxlength="19">
+
+                <label class="field-label" for="card-name">Name on Card</label>
+                <input class="field-input" id="card-name" type="text" placeholder="Full name">
+
+                <section class="field-row">
+                    <section class="field-group">
+                        <label class="field-label" for="card-expiry">Expiry</label>
+                        <input class="field-input" id="card-expiry" type="text" placeholder="MM/YY" maxlength="5">
+                    </section>
+                    <section class="field-group">
+                        <label class="field-label" for="card-cvv">CVV</label>
+                        <!-- password type masks the cvv -->
+                        <input class="field-input" id="card-cvv" type="password" placeholder="···" maxlength="3">
+                    </section>
+                </section>
+            </fieldset>
+
+            <!-- cart items shown before placing order -->
+            <ul class="confirm-items" id="checkout-order-items"></ul>
+
+            <!-- order total before placing -->
+            <dl class="checkout-summary-rows">
+                <dt>Subtotal</dt><dd class="co-subtotal"></dd>
+                <dt>Shipping</dt><dd class="co-shipping"></dd>
+                <dt>Due Total</dt><dd class="co-total"></dd>
+            </dl>
+
+            <button class="btn-primary" id="btn-place-order">PLACE ORDER · $<span id="co-total-inline"></span></button>
+            <p class="ssl-label">secured by SSL encryption</p>
+            <button class="btn-ghost" id="back-to-shipment">← Back to Shipment</button>
+        </section>
+
+
+        <!-- confirmation: shown after order placed -->
+        <section class="checkout-step" id="step-confirmation">
+
+            <!-- css styled checkmark, no extra asset needed -->
+            <figure class="confirmation-check">✓</figure>
+
+            <h1 class="confirmation-title">Order Placed!</h1>
+
+            <!-- personalised by js using name + city from step 1 -->
+            <p class="confirmation-message">Thank you <span id="confirm-name"></span>. Your oils are on their way to <span id="confirm-city"></span>.</p>
+
+            <p class="confirm-order-label">Order Reference</p>
+            <p class="confirm-order-num" id="confirm-order-num"></p>
+
+            <!-- cart items injected by js -->
+            <ul class="confirm-items" id="confirm-items"></ul>
+
+            <dl class="confirm-details">
+                <dt>DELIVERING TO</dt><dd id="confirm-address"></dd>
+                <dt>SHIPPING METHOD</dt><dd id="confirm-shipping"></dd>
+                <dt>PAYMENT</dt><dd id="confirm-payment"></dd>
+            </dl>
+
+            <dl class="checkout-summary-rows">
+                <dt>Subtotal</dt><dd id="confirm-subtotal"></dd>
+                <dt>Shipping</dt><dd id="confirm-shipping-val"></dd>
+                <dt>Tax</dt><dd>Included</dd>
+                <dt class="co-total-label">TOTAL</dt><dd id="confirm-total"></dd>
+            </dl>
+
+            <a href="shop.html" class="btn-primary">Continue Shopping</a>
+            <button class="btn-ghost" id="btn-view-order">View Order</button>
+        </section>
+
+    </main>
+</body>
+</html>
