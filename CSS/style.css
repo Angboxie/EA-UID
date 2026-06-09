@@ -685,7 +685,6 @@ body{
     font-weight: 600;
     color: var(--carbon);
     line-height: 1.2;
-    height: 2.4em;
     overflow: hidden;
 }
 
