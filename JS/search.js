@@ -1,4 +1,4 @@
-/* products to search through — should be the same as shop.js */
+/* products to search through: should be the same as shop.js */
 const products = [
     /* uplift */
     { feeling: 'uplift', name: 'Zest Myrtle', scent: 'green mango · citrus peel · fresh peel', price: '22.95', img: 'assets/zest-myrtle.png', link: 'product-zest-myrtle.html' },
@@ -30,7 +30,7 @@ const alsoLikeList = document.getElementById('also-list');
 const resultsCountLabel = document.getElementById('results-count');
 const recentSearchList = document.getElementById('recent-list');
 
-/* build a single product card. btw the ${} to clarify i forgot is to insert variable values */
+/* build a single product card. the ${} to clarify is to insert variable values */
 
 function buildCard(p) {
     const li = document.createElement('li');
@@ -74,7 +74,7 @@ function runSearch(query) {
 
     const matchedProducts = filterProducts(query);
 
-    /* suggestions — same feeling, not already in results */
+    /* suggestions: same feeling, not already in results */
     const matchedNames = matchedProducts.map(p => p.name);
     const suggestedProducts = products.filter(p =>
         matchedProducts.some(m => m.feeling === p.feeling) && !matchedNames.includes(p.name)

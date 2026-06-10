@@ -1559,7 +1559,7 @@ body{
     opacity: 0.5;
 }
 
-/* product cards — two column */
+/* product cards, two column */
 .search-product-list {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2053,7 +2053,7 @@ body{
     border-color: var(--evergreen);
 }
 
-/* step 3 totals — co- prefix avoids clash with cart summary classes */
+/* step 3 totals, co- prefix avoids clash with cart summary classes */
 .checkout-summary-rows {
     display: grid;
     grid-template-columns: 1fr 1fr;

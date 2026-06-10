@@ -13,6 +13,7 @@ if (headline) {
     }, 3000);
 }
 
+/* full overall function to render the navigation bar onto all pages and inject them into future pages also*/
 function renderNav() {
     const header = document.querySelector('.site-header');
     if (!header) return;

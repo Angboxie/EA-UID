@@ -7,6 +7,7 @@ const cartPrice = document.getElementById('cart-price');
 let basePrice = 22.95;
 let qty = 1;
 
+/* function to update price of big text in both page and button based on clicks*/
 function updatePriceDisplay() {
     const total = (basePrice * qty).toFixed(2);
     cartPrice.textContent = total;
@@ -55,6 +56,7 @@ tabBtns.forEach(btn => {
     });
 });
 
+/* same flytocart animation*/
 function flyToCart(fromBtn) {
     const cartIcon = document.querySelector('.cart-link img');
     if (!cartIcon) return;

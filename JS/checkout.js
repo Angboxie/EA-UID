@@ -1,4 +1,4 @@
-/* read cart from sessionStorage — stays in memory even after we wipe it later */
+/* read cart from sessionStorage: stays in memory even after we wipe it later */
 const cart = JSON.parse(sessionStorage.getItem('cart') || '[]');
 
 
@@ -60,7 +60,7 @@ function showTotals() {
 /* confirmation */
 
 function showConfirmation() {
-    /* wipe cart — badge zeroes on next nav, cart variable still in memory */
+    /* wipe cart: badge zeroes on next nav, cart variable still in memory */
     sessionStorage.setItem('cart', '[]');
 
     /* personalise with name and city from step 1 */
@@ -108,6 +108,7 @@ document.querySelectorAll('.payment-method-btn').forEach(btn => {
     btn.addEventListener('click', () => {
         document.querySelectorAll('.payment-method-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
+        
         /* only show card form if card is selected */
         document.getElementById('card-form').hidden = btn.dataset.method !== 'card';
     });

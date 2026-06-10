@@ -120,7 +120,7 @@ function wireItemButtons() {
 }
 
 
-/* actual render */
+/* actual render, shows up on final website*/
 
 function render() {
     const subtotal = getSubtotal();

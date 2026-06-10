@@ -55,6 +55,7 @@ tabBtns.forEach(btn => {
     });
 });
 
+/* actual function to animate the dot to fly to the cart, with dot styling and also dot flying */
 function flyToCart(fromBtn) {
     const cartIcon = document.querySelector('.cart-link img');
     if (!cartIcon) return;
